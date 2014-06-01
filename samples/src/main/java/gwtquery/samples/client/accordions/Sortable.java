@@ -38,7 +38,7 @@ public class Sortable extends AbstractAccordionDemo {
     });
     $("#accordion", demo).as(Ui).accordion("{header: \"> div > h3\"}").sortable("{axis: \"y\", handle: \"h3\"}").bind("sortstop", new Function() {
       @Override
-      public boolean f(Event e, Object data) {
+      public boolean f(Event e, Object... data) {
         stop.stop = true;
         return false;
       }

@@ -22,7 +22,7 @@ public class Serialize extends AbstractSelectableDemo {
   public void setupDemoElement(Element demo) {
     $("#selectable").as(Ui).selectable().bind(Selectable.Event.stop, new Function() {
       @Override
-      public boolean f(Event e, Object o) {
+      public boolean f(Event e, Object... o) {
         final GQuery result = $("#select-result").empty();
         $(".ui-selected").each(new Function() {
           @Override

@@ -41,7 +41,7 @@ public class Positions extends AbstractPositionDemo {
 
     $(".positionable").as(Ui).draggable().bind("drag", new Function() {
       @Override
-      public boolean f(Event e, Object data) {
+      public boolean f(Event e, Object... data) {
         // reset offset before calculating it
         $("#offset").val("0");
         // TODO: implement using GQuery

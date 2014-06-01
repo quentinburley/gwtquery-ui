@@ -26,21 +26,21 @@ public class Event extends AbstractDraggableDemo {
 
     $("#draggable").as(Ui).draggable().bind(Draggable.Event.start, new Function() {
       @Override
-      public boolean f(com.google.gwt.user.client.Event e, Object data) {
+      public boolean f(com.google.gwt.user.client.Event e, Object... data) {
         counts[0]++;
         updateCounterStatus(start_counter, counts[0]);
         return false;
       }
     }).bind(Draggable.Event.drag, new Function() {
       @Override
-      public boolean f(com.google.gwt.user.client.Event e, Object data) {
+      public boolean f(com.google.gwt.user.client.Event e, Object... data) {
         counts[1]++;
         updateCounterStatus(drag_counter, counts[1]);
         return false;
       }
     }).bind(Draggable.Event.stop, new Function() {
       @Override
-      public boolean f(com.google.gwt.user.client.Event e, Object data) {
+      public boolean f(com.google.gwt.user.client.Event e, Object... data) {
         counts[2]++;
         updateCounterStatus(stop_counter, counts[2]);
         return false;
